@@ -91,6 +91,14 @@ App runs on `http://localhost:3000`
 
 MIT License
 
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📧 Contact
+
+For questions or support, please open an issue on GitHub.
+
 ---
 
 **Made with ❤️ for education**
