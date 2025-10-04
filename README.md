@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# 🎓 Quiz & Audio Learning Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern educational platform combining quiz management with AI-powered audio processing. Students take quizzes while teachers upload audio lectures that are automatically transcribed and analyzed by AI.
 
-## Available Scripts
+## ✨ Features
 
-In the project directory, you can run:
+### Quiz System
+- Create and manage quizzes with multiple-choice questions
+- Organize by subjects
+- Timed quizzes with instant feedback
+- Search and filter functionality
+- Progress tracking
 
-### `npm start`
+### AI Audio Processing
+- **Upload Audio/Voice Recording** - Upload MP3 files or record directly from browser
+- **AI Transcription** - Automatic speech-to-text using AssemblyAI
+- **AI Analysis** - Auto-generate title, tags, mood, and summary using LLaMA 3.3
+- **AI Image Generation** - Create images from transcription content
+- **AI Todo List** - Extract actionable tasks with priorities
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Quick Start
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
+- Node.js, MongoDB, npm
 
-### `npm test`
+### Installation
+```bash
+# Clone repository
+git clone <your-repo-url>
+cd quiz-audio-platform
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Install dependencies
+npm install
+cd backend && npm install
 
-### `npm run build`
+# Setup .env file with API keys
+MONGODB_URI=mongodb://localhost:27017/quiz_db
+ASSEMBLYAI_API_KEY=your_key
+CLOUDINARY_CLOUD_NAME=your_name
+CLOUDINARY_API_KEY=your_key
+CLOUDINARY_API_SECRET=your_secret
+OPENROUTER_API_KEY=your_key
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Run application
+# Terminal 1: Start MongoDB
+mongod
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Terminal 2: Start Backend
+cd backend && npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Terminal 3: Start Frontend
+npm start
+```
 
-### `npm run eject`
+App runs on `http://localhost:3000`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠️ Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Frontend:** React, React Router, Axios  
+**Backend:** Node.js, Express, MongoDB, Mongoose  
+**AI Services:** AssemblyAI (transcription), OpenRouter/LLaMA 3.3 (analysis), Pollinations.ai (images)  
+**Storage:** Cloudinary
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📁 Project Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+├── backend/
+│   ├── models/          # Database models
+│   ├── route/           # API routes
+│   ├── services/        # AI services
+│   └── server.js
+├── src/
+│   ├── components/      # React components
+│   ├── App.js
+│   └── App.css
+└── package.json
+```
 
-## Learn More
+## 🎯 Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Students:** Browse quizzes → Take quiz → View results  
+**Teachers:** Create quizzes → Upload audio → AI processes → View transcription/summary/images/todos
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🔑 API Keys Required
 
-### Code Splitting
+- [AssemblyAI](https://www.assemblyai.com/) - Speech-to-text
+- [Cloudinary](https://cloudinary.com/) - Audio storage
+- [OpenRouter](https://openrouter.ai/) - AI analysis
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📝 License
 
-### Analyzing the Bundle Size
+MIT License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Made with ❤️ for education**
